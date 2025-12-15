@@ -30,7 +30,7 @@ const Menu: React.FC = () => {
 
             {/* Dropdown Menu */}
             {open && (
-                <div className="absolute left-0 mt-2 w-40 bg-red-500 text-white rounded shadow-lg z-50">
+                <div className="absolute left-0 mt-2 w-40 bg-red-500 text-white absolute left-0 top-24 h-[calc (100vh-6rem)]">
                     {links.map((item) => (
                         <Link
                             key={item.id}
