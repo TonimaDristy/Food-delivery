@@ -32,10 +32,11 @@ const Menu: React.FC = () => {
             {open && (
                 <div
                     style={{
-                        position: 'absolute',
-                        top: '3rem',
-                        left: 0,
-                        width: '12rem',
+                        position: 'fixed',          // fixed relative to viewport
+                        top: '4rem',                // distance from top
+                        left: '50%',                // center horizontally
+                        transform: 'translateX(-50%)',
+                        width: '15rem',             // width of dropdown
                         backgroundColor: 'maroon',
                         color: 'white',
                         borderRadius: '0.25rem',
@@ -43,9 +44,10 @@ const Menu: React.FC = () => {
                         zIndex: 50,
                         display: 'flex',
                         flexDirection: 'column',
-                        alignItems: 'center', // center items horizontally
+                        alignItems: 'center',       // center items inside
                         maxHeight: 'calc(100vh - 6rem)',
                         overflowY: 'auto',
+                        padding: '0.5rem 0',
                     }}
                 >
                     {links.map((item) => (
@@ -58,7 +60,7 @@ const Menu: React.FC = () => {
                                 color: 'white',
                                 cursor: 'pointer',
                                 width: '100%',
-                                textAlign: 'center', // center text inside link
+                                textAlign: 'center',
                             }}
                             onMouseEnter={(e) => {
                                 (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#8B0000';
