@@ -3,13 +3,11 @@ import Link from 'next/link';
 
 const Navbar = () => {
     return (
-        <div className="h-12 p-4 flex items-center justify-between border-b-2 border-red-500 uppercase">
+        <div className="flex items-center justify-between p-4 border-b-2 border-red-500">
             {/* LOGO */}
-            <div className="text-xl font-bold">
-                <Link href="/" className="text-red-500 no-underline">
-                    EatUp
-                </Link>
-            </div>
+            <Link href="/" className="text-5xl font-extrabold text-red-600 uppercase no-underline">
+                EatUp
+            </Link>
 
             {/* MOBILE MENU */}
             <Menu />
