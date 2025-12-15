@@ -12,7 +12,7 @@ const Notification = () => {
                 justifyContent: 'center',  // horizontal center
             }}
         >
-            Free delivery for all orders over $50. Order your food now!
+            Because great food should come easy. Free delivery for all orders over $50!
         </div>
 
 
