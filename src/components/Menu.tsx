@@ -15,7 +15,7 @@ const Menu: React.FC = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="relative inline-block">
+        <div style={{ position: 'relative', display: 'inline-block' }}>
             {/* Menu Icon */}
             <div>
                 <Image
@@ -23,21 +23,49 @@ const Menu: React.FC = () => {
                     alt="Menu Icon"
                     width={30}
                     height={30}
-                    className="cursor-pointer"
+                    style={{ cursor: 'pointer' }}
                     onClick={() => setOpen(!open)}
                 />
             </div>
 
             {/* Dropdown Menu */}
             {open && (
-                //<div className="absolute left-0 mt-2 w-40 bg-red-500 text-white absolute left-0 top-24 h-[calc (100vh-6rem)]">
-                <div className="absolute left-0 top-24 mt-2 w-40 bg-red-500 text-white h-[calc(100vh-6rem)]">
-
+                <div
+                    style={{
+                        position: 'absolute',
+                        top: '3rem',
+                        left: 0,
+                        width: '12rem',
+                        backgroundColor: 'maroon',
+                        color: 'white',
+                        borderRadius: '0.25rem',
+                        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                        zIndex: 50,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center', // center items horizontally
+                        maxHeight: 'calc(100vh - 6rem)',
+                        overflowY: 'auto',
+                    }}
+                >
                     {links.map((item) => (
                         <Link
                             key={item.id}
                             href={item.url}
-                            className="block px-4 py-2 hover:bg-red-600"
+                            style={{
+                                padding: '0.5rem 1rem',
+                                textDecoration: 'none',
+                                color: 'white',
+                                cursor: 'pointer',
+                                width: '100%',
+                                textAlign: 'center', // center text inside link
+                            }}
+                            onMouseEnter={(e) => {
+                                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#8B0000';
+                            }}
+                            onMouseLeave={(e) => {
+                                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'maroon';
+                            }}
                         >
                             {item.title}
                         </Link>
