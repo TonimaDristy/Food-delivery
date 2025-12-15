@@ -1,13 +1,32 @@
+"use client";
+
+import React from 'react';
 import Menu from './Menu';
 import Link from 'next/link';
 
 const Navbar = () => {
     return (
-        <div className="flex items-center justify-between p-4 border-b-2 border-red-500">
+        <div
+            style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: '1rem',
+                backgroundColor: 'maroon', // red background
+                color: 'white',             // white text
+            }}
+        >
             {/* LOGO */}
             <Link
                 href="/"
-                className="text-6xl font-extrabold text-red-600 uppercase no-underline leading-none"
+                style={{
+                    fontSize: '3rem',
+                    fontWeight: '800',
+                    color: 'white',           // white text for logo
+                    textTransform: 'uppercase',
+                    textDecoration: 'none',
+                    lineHeight: 1,
+                }}
             >
                 EatUp
             </Link>
