@@ -23,11 +23,11 @@ const Menu = () => {
             ) : (
                 <Image src="/close.png" alt="Menu" width={20} height={20} onClick={() => setOpen(false)} />
             )}
-            <div>
-                <links.map((item)=>(
-                <Link href={item.url} Key={item.id}>
-                    {item.title
-                    }</Link>
+            <div className="bg-red-500 text-white absolute left-0 top-24">
+                {links.map((item) => (
+                    <Link key={item.id} href={item.url}>
+                        {item.title}
+                    </Link>
                 ))}
             </div>
         </div>
