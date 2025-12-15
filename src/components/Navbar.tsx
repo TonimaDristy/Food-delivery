@@ -3,19 +3,16 @@ import Link from 'next/link';
 
 const Navbar = () => {
     return (
-        <div className="h-20 px-6">
-            {/* LOGO + MENU STACKED */}
-            <div className="flex flex-col items-start">
-                <Link
-                    href="/"
-                    className="text-2xl font-bold no-underline"
-                >
-                    EatUp
-                </Link>
-
+        <div className="h-12 text-red-500 p-4 flex items-center justify-between border-b-2 border-b-red-500 uppercase">
+            {/* LOGO  */}
+            <div className="text-xl">
+                <Link href="/">EatUp </Link>
+            </div>
+            {/* MOBILE MENU*/}
+            <div>
                 <Menu />
             </div>
-        </div>
+        </div >
     );
 };
 
