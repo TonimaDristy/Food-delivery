@@ -71,9 +71,13 @@ const Menu: React.FC = () => {
                         >
                             {item.title}
                         </Link>
+
                     ))}
+
+                    {<Link href="/login">Login</Link>   
+                    <Link href="/login">Login</Link>}
                 </div>
-            )}
+           
         </div>
     );
 };
