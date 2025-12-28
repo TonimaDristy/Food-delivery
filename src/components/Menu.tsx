@@ -32,11 +32,11 @@ const Menu: React.FC = () => {
             {open && (
                 <div
                     style={{
-                        position: 'fixed',          // fixed relative to viewport
-                        top: '4rem',                // distance from top
-                        left: '50%',                // center horizontally
+                        position: 'fixed',
+                        top: '4rem',
+                        left: '50%',
                         transform: 'translateX(-50%)',
-                        width: '15rem',             // width of dropdown
+                        width: '15rem',
                         backgroundColor: 'maroon',
                         color: 'white',
                         borderRadius: '0.25rem',
@@ -44,7 +44,7 @@ const Menu: React.FC = () => {
                         zIndex: 50,
                         display: 'flex',
                         flexDirection: 'column',
-                        alignItems: 'center',       // center items inside
+                        alignItems: 'center',
                         maxHeight: 'calc(100vh - 6rem)',
                         overflowY: 'auto',
                         padding: '0.5rem 0',
@@ -71,13 +71,31 @@ const Menu: React.FC = () => {
                         >
                             {item.title}
                         </Link>
-
                     ))}
 
-                    {<Link href="/login">Login</Link>   
-                    <Link href="/login">Login</Link>}
+                    {/* Login Link */}
+                    <Link
+                        href="/login"
+                        style={{
+                            padding: '0.5rem 1rem',
+                            textDecoration: 'none',
+                            color: 'white',
+                            cursor: 'pointer',
+                            width: '100%',
+                            textAlign: 'center',
+                            marginTop: '0.25rem'
+                        }}
+                        onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#8B0000';
+                        }}
+                        onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'maroon';
+                        }}
+                    >
+                        Login
+                    </Link>
                 </div>
-           
+            )}
         </div>
     );
 };
