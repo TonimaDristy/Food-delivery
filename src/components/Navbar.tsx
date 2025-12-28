@@ -1,47 +1,44 @@
 "use client";
 
-import React from 'react';
-import Menu from './Menu';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
+import Menu from "./Menu";
 
 const Navbar = () => {
     return (
         <>
-            <div
+            <nav
                 style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    padding: '1rem',
-                    backgroundColor: 'white', // white background
-                    color: 'black',           // default text color
+                    backgroundColor: "#fff",
+                    padding: "1rem 1.5rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
                 }}
             >
-                {/* LOGO */}
+                {/* Logo */}
                 <Link
                     href="/"
                     style={{
-                        fontSize: '3rem',
-                        fontWeight: '800',
-                        color: 'maroon',          // EatUp in red
-                        textTransform: 'uppercase',
-                        textDecoration: 'none',
-                        lineHeight: 1,
+                        fontSize: "2.5rem",
+                        fontWeight: "800",
+                        color: "maroon",
+                        textDecoration: "none",
                     }}
                 >
                     EatUp
                 </Link>
 
-                {/* MOBILE MENU */}
+                {/* Mobile Menu */}
                 <Menu />
-            </div>
+            </nav>
 
-            {/* Full-width red line under Navbar */}
+            {/* Bottom Line */}
             <div
                 style={{
-                    width: '100%',
-                    height: '4px',        // thickness of the line
-                    backgroundColor: 'maroon',
+                    width: "100%",
+                    height: "4px",
+                    backgroundColor: "maroon",
                 }}
             />
         </>

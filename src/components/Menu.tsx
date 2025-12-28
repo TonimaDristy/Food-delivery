@@ -1,99 +1,70 @@
 "use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const links = [
-    { id: 1, title: "Homepage", url: "/" },
+    { id: 1, title: "Home", url: "/" },
     { id: 2, title: "Menu", url: "/menu" },
-    { id: 3, title: "Working Hours", url: "/" },
+    { id: 3, title: "Orders", url: "/orders" },
     { id: 4, title: "Contact", url: "/" },
 ];
 
-const Menu: React.FC = () => {
+const Menu = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div style={{ position: 'relative', display: 'inline-block' }}>
+        <div style={{ position: "relative" }}>
             {/* Menu Icon */}
-            <div>
-                <Image
-                    src={open ? "/close.png" : "/open.png"}
-                    alt="Menu Icon"
-                    width={30}
-                    height={30}
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => setOpen(!open)}
-                />
-            </div>
+            <Image
+                src={open ? "/close.png" : "/open.png"}
+                alt="Menu Icon"
+                width={30}
+                height={30}
+                style={{ cursor: "pointer" }}
+                onClick={() => setOpen(!open)}
+            />
 
-            {/* Dropdown Menu */}
+            {/* Dropdown */}
             {open && (
                 <div
                     style={{
-                        position: 'fixed',
-                        top: '4rem',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        width: '15rem',
-                        backgroundColor: 'maroon',
-                        color: 'white',
-                        borderRadius: '0.25rem',
-                        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-                        zIndex: 50,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        maxHeight: 'calc(100vh - 6rem)',
-                        overflowY: 'auto',
-                        padding: '0.5rem 0',
+                        position: "fixed",
+                        top: "4.5rem",
+                        right: "1rem",
+                        width: "220px",
+                        backgroundColor: "maroon",
+                        borderRadius: "8px",
+                        overflow: "hidden",
+                        zIndex: 100,
+                        boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
                     }}
                 >
-                    {links.map((item) => (
-                        <Link
-                            key={item.id}
-                            href={item.url}
-                            style={{
-                                padding: '0.5rem 1rem',
-                                textDecoration: 'none',
-                                color: 'white',
-                                cursor: 'pointer',
-                                width: '100%',
-                                textAlign: 'center',
-                            }}
-                            onMouseEnter={(e) => {
-                                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#8B0000';
-                            }}
-                            onMouseLeave={(e) => {
-                                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'maroon';
-                            }}
-                        >
-                            {item.title}
-                        </Link>
-                    ))}
-
-                    {/* Login Link */}
-                    <Link
-                        href="/login"
-                        style={{
-                            padding: '0.5rem 1rem',
-                            textDecoration: 'none',
-                            color: 'white',
-                            cursor: 'pointer',
-                            width: '100%',
-                            textAlign: 'center',
-                            marginTop: '0.25rem'
-                        }}
-                        onMouseEnter={(e) => {
-                            (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#8B0000';
-                        }}
-                        onMouseLeave={(e) => {
-                            (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'maroon';
-                        }}
-                    >
-                        Login
-                    </Link>
+                    {[...links, { id: 5, title: "Login", url: "/login" }].map(
+                        (item) => (
+                            <Link
+                                key={item.id}
+                                href={item.url}
+                                onClick={() => setOpen(false)}
+                                style={{
+                                    display: "block",
+                                    padding: "12px",
+                                    textAlign: "center",
+                                    color: "white",
+                                    textDecoration: "none",
+                                }}
+                                onMouseEnter={(e) =>
+                                    (e.currentTarget.style.backgroundColor = "#8B0000")
+                                }
+                                onMouseLeave={(e) =>
+                                    (e.currentTarget.style.backgroundColor = "maroon")
+                                }
+                            >
+                                {item.title}
+                            </Link>
+                        )
+                    )}
                 </div>
             )}
         </div>
