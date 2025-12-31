@@ -1,121 +1,43 @@
-"use client";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
-import { useState } from "react";
-import Link from "next/link";
-
-export default function LoginPage() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
-    const handleLogin = (e: React.FormEvent) => {
-        e.preventDefault();
-
-        // frontend-only for now
-        console.log("Login Data:", { email, password });
-
-        alert("Login successful (frontend only)");
-    };
-
+export default function Footer() {
     return (
-        <main
+        <footer
             style={{
-                minHeight: "80vh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 backgroundColor: "#F1ECE4",
-                padding: "1rem",
+                padding: "3rem 1rem",
+                textAlign: "center",
+                marginTop: "3rem",
+                borderTop: "1px solid #ddd",
             }}
         >
-            <form
-                onSubmit={handleLogin}
+            {/* Logo or Brand */}
+            <h2
                 style={{
-                    backgroundColor: "white",
-                    padding: "2.5rem",
-                    borderRadius: "20px",
-                    width: "100%",
-                    maxWidth: "400px",
-                    boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
+                    color: "maroon",
+                    fontSize: "1.5rem",
+                    fontWeight: "800",
+                    marginBottom: "1rem",
                 }}
             >
-                <h1
-                    style={{
-                        textAlign: "center",
-                        fontSize: "2rem",
-                        fontWeight: "800",
-                        color: "maroon",
-                        marginBottom: "1.5rem",
-                    }}
-                >
-                    Login 🔐
-                </h1>
+                Delicious Food
+            </h2>
 
-                {/* Email */}
-                <div style={{ marginBottom: "1rem" }}>
-                    <label style={{ fontWeight: "600" }}>Email or Phone</label>
-                    <input
-                        type="text"
-                        required
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Enter your email or phone"
-                        style={inputStyle}
-                    />
-                </div>
+            {/* Social Icons */}
+            <div style={{ marginBottom: "1.5rem", display: "flex", justifyContent: "center", gap: "1rem" }}>
+                <a href="#" style={{ color: "maroon", fontSize: "1.2rem" }}><FaFacebookF /></a>
+                <a href="#" style={{ color: "maroon", fontSize: "1.2rem" }}><FaTwitter /></a>
+                <a href="#" style={{ color: "maroon", fontSize: "1.2rem" }}><FaInstagram /></a>
+            </div>
 
-                {/* Password */}
-                <div style={{ marginBottom: "1.5rem" }}>
-                    <label style={{ fontWeight: "600" }}>Password</label>
-                    <input
-                        type="password"
-                        required
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Enter your password"
-                        style={inputStyle}
-                    />
-                </div>
+            {/* Footer Text */}
+            <p style={{ color: "#555", marginBottom: "0.5rem", fontSize: "0.95rem" }}>
+                © {new Date().getFullYear()} Delicious Food Delivery. All rights reserved.
+            </p>
+            <p style={{ color: "#777", fontSize: "0.85rem" }}>
+                Serving happiness🍕
 
-                {/* Button */}
-                <button type="submit" style={btnStyle}>
-                    Login
-                </button>
-
-                {/* Extra */}
-                <p
-                    style={{
-                        textAlign: "center",
-                        marginTop: "1rem",
-                        fontSize: "0.9rem",
-                    }}
-                >
-                    Don’t have an account?{" "}
-                    <Link href="/signup" style={{ color: "maroon", fontWeight: "700" }}>
-                        Sign up
-                    </Link>
-                </p>
-            </form>
-        </main>
+            </p>
+        </footer>
     );
 }
-
-const inputStyle = {
-    width: "100%",
-    padding: "0.7rem",
-    marginTop: "0.4rem",
-    borderRadius: "8px",
-    border: "1px solid #ccc",
-    outline: "none",
-};
-
-const btnStyle = {
-    width: "100%",
-    backgroundColor: "maroon",
-    color: "white",
-    padding: "0.8rem",
-    borderRadius: "30px",
-    border: "none",
-    fontSize: "1rem",
-    fontWeight: "700",
-    cursor: "pointer",
-};
