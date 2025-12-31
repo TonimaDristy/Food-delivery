@@ -21,7 +21,7 @@ export default function CartPage() {
         setCart(storedCart);
     }, []);
 
-    // Update localStorage
+    // Save cart to localStorage
     const updateCart = (updatedCart: CartItem[]) => {
         setCart(updatedCart);
         localStorage.setItem("cart", JSON.stringify(updatedCart));
@@ -64,10 +64,27 @@ export default function CartPage() {
                 maxWidth: "1100px",
                 margin: "3rem auto",
                 padding: "2rem",
-                backgroundColor: "#F1ECE4",
+                backgroundColor: "#EAE5DD", // slightly darker shade
                 borderRadius: "20px",
             }}
         >
+            {/* Cart Image */}
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "1rem",
+                }}
+            >
+                <Image
+                    src="/cart.png"
+                    alt="Cart"
+                    width={120}
+                    height={120}
+                    priority
+                />
+            </div>
+
             <h1
                 style={{
                     textAlign: "center",
@@ -115,7 +132,14 @@ export default function CartPage() {
                                 flexWrap: "wrap",
                             }}
                         >
-                            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+                            {/* Product */}
+                            <div
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: "1rem",
+                                }}
+                            >
                                 <Image
                                     src={item.image}
                                     alt={item.name}
@@ -123,7 +147,6 @@ export default function CartPage() {
                                     height={80}
                                     style={{ borderRadius: "10px", objectFit: "cover" }}
                                 />
-
                                 <div>
                                     <h3 style={{ fontSize: "1.1rem" }}>{item.name}</h3>
                                     <p style={{ fontWeight: "600" }}>
@@ -132,7 +155,7 @@ export default function CartPage() {
                                 </div>
                             </div>
 
-                            {/* Quantity Controls */}
+                            {/* Quantity */}
                             <div
                                 style={{
                                     display: "flex",
@@ -140,10 +163,7 @@ export default function CartPage() {
                                     gap: "0.5rem",
                                 }}
                             >
-                                <button
-                                    onClick={() => decreaseQty(item.id)}
-                                    style={qtyBtn}
-                                >
+                                <button onClick={() => decreaseQty(item.id)} style={qtyBtn}>
                                     −
                                 </button>
 
@@ -151,10 +171,7 @@ export default function CartPage() {
                                     {item.quantity}
                                 </span>
 
-                                <button
-                                    onClick={() => increaseQty(item.id)}
-                                    style={qtyBtn}
-                                >
+                                <button onClick={() => increaseQty(item.id)} style={qtyBtn}>
                                     +
                                 </button>
                             </div>

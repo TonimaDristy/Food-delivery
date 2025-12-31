@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,9 +9,11 @@ const links = [
     { id: 2, title: "Menu", url: "/menu" },
     { id: 3, title: "Orders", url: "/orders" },
     { id: 4, title: "Contact", url: "/" },
+    { id: 5, title: "Cart", url: "/cart" },
+    { id: 6, title: "Login", url: "/login" }, // ✅ NEW UNIQUE ID
 ];
 
-const Menu = () => {
+export default function Menu() {
     const [open, setOpen] = useState(false);
 
     return (
@@ -41,34 +43,30 @@ const Menu = () => {
                         boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
                     }}
                 >
-                    {[...links, { id: 5, title: "Login", url: "/login" }].map(
-                        (item) => (
-                            <Link
-                                key={item.id}
-                                href={item.url}
-                                onClick={() => setOpen(false)}
-                                style={{
-                                    display: "block",
-                                    padding: "12px",
-                                    textAlign: "center",
-                                    color: "white",
-                                    textDecoration: "none",
-                                }}
-                                onMouseEnter={(e) =>
-                                    (e.currentTarget.style.backgroundColor = "#8B0000")
-                                }
-                                onMouseLeave={(e) =>
-                                    (e.currentTarget.style.backgroundColor = "maroon")
-                                }
-                            >
-                                {item.title}
-                            </Link>
-                        )
-                    )}
+                    {links.map((item) => (
+                        <Link
+                            key={item.id} // ✅ all keys unique
+                            href={item.url}
+                            onClick={() => setOpen(false)}
+                            style={{
+                                display: "block",
+                                padding: "12px",
+                                textAlign: "center",
+                                color: "white",
+                                textDecoration: "none",
+                            }}
+                            onMouseEnter={(e) =>
+                                (e.currentTarget.style.backgroundColor = "#8B0000")
+                            }
+                            onMouseLeave={(e) =>
+                                (e.currentTarget.style.backgroundColor = "maroon")
+                            }
+                        >
+                            {item.title}
+                        </Link>
+                    ))}
                 </div>
             )}
         </div>
     );
-};
-
-export default Menu;
+}
