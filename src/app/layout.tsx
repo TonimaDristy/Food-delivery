@@ -1,10 +1,9 @@
-import Notification from '../components/Notification'
+import Notification from '../components/Notification';
 import Navbar from '../components/Navbar';
 import './globals.css';
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-
 import Footer from '../components/Footer';
 
 const geistSans = Geist({
@@ -24,19 +23,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ backgroundColor: "#EDE7DE" }}
+        style={{ backgroundColor: "#FFE5B4" }} // light orange background
       >
         <Notification />
         <Navbar />
         {children}
-
+        {/* optional, if you want footer on every page */}
       </body>
     </html>
   );

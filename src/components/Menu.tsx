@@ -8,11 +8,10 @@ const links = [
     { id: 1, title: "Home", url: "/" },
     { id: 2, title: "Menu", url: "/menu" },
     { id: 3, title: "Orders", url: "/orders" },
-    { id: 4, title: "Contact", url: "/" },
-    { id: 5, title: "Cart", url: "/cart" },
-    { id: 6, title: "Login", url: "/login" }, // ✅ NEW UNIQUE ID
-];
 
+    { id: 5, title: "Cart", url: "/cart" },
+    { id: 6, title: "Login", url: "/login" },
+];
 export default function Menu() {
     const [open, setOpen] = useState(false);
 
@@ -36,7 +35,7 @@ export default function Menu() {
                         top: "4.5rem",
                         right: "1rem",
                         width: "220px",
-                        backgroundColor: "maroon",
+                        backgroundColor: "orange",
                         borderRadius: "8px",
                         overflow: "hidden",
                         zIndex: 100,
@@ -45,7 +44,7 @@ export default function Menu() {
                 >
                     {links.map((item) => (
                         <Link
-                            key={item.id} // ✅ all keys unique
+                            key={item.id}
                             href={item.url}
                             onClick={() => setOpen(false)}
                             style={{

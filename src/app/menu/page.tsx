@@ -21,20 +21,52 @@ const foodItems: FoodItem[] = [
         id: 2,
         name: "Pepperoni Pizza",
         price: 12.5,
-        image: "/slide1.png",
+        image: "/p8.png",
     },
-    {
-        id: 3,
-        name: "Fried Chicken",
-        price: 9.75,
-        image: "/slide2.png",
-    },
+
     {
         id: 4,
-        name: "French Fries",
+        name: "Pasta",
         price: 4.99,
-        image: "/offerProduct.png",
+        image: "/p4.png",
     },
+
+    {
+        id: 5,
+        name: " Veggie Supreme",
+        price: 10.50,
+        image: "/p3.png",
+
+    },
+
+    {
+        id: 3,
+        name: "Macaroni",
+        price: 9.75,
+        image: "/p7.png",
+    },
+
+    {
+        id: 6,
+        name: " Bacon Deluxe",
+        price: 8.50,
+        image: "/p2.png",
+    },
+
+    {
+        id: 7,
+        name: "Pesto Primavera",
+        price: 17.50,
+        image: "/p10.png",
+    },
+
+    {
+        id: 8,
+        name: "Cheesy Monster",
+        price: 15.99,
+        image: "/p9.png",
+    },
+
 ];
 
 export default function MenuPage() {
@@ -74,7 +106,7 @@ export default function MenuPage() {
                     fontSize: "2.8rem",
                     fontWeight: "800",
                     marginBottom: "2.5rem",
-                    color: "maroon",
+                    color: "orange",
                 }}
             >
                 Our Menu 🍽️

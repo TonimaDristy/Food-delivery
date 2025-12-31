@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const slides = ["/slide1.png", "/slide2.png"];
+const slides = ["/slide1.png", "/loginBg.png"];
 
 export default function HomePage() {
   const [current, setCurrent] = useState(0);
@@ -153,20 +153,24 @@ export default function HomePage() {
               </div>
 
               {/* Product Image */}
-              <Image
-                src="/offerProduct.png"
-                alt="Offer Product"
-                width={300}
-                height={300}
-                style={{ objectFit: "contain" }}
-              />
+
+              <div>
+                <Image
+                  src="/p5.png"
+                  alt="Offer Product 2"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
+
             </div>
           </div>
         </section>
-      </main>
+      </main >
 
       {/* Footer only on Home Page */}
-      <Footer />
+      < Footer />
     </>
   );
 }

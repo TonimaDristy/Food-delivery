@@ -9,7 +9,7 @@ const Navbar = () => {
         <>
             <nav
                 style={{
-                    backgroundColor: "#fff",
+                    backgroundColor: "#FFE5B4",
                     padding: "1rem 1.5rem",
                     display: "flex",
                     alignItems: "center",
@@ -22,7 +22,7 @@ const Navbar = () => {
                     style={{
                         fontSize: "2.5rem",
                         fontWeight: "800",
-                        color: "maroon",
+                        color: "orange",
                         textDecoration: "none",
                     }}
                 >
@@ -38,7 +38,7 @@ const Navbar = () => {
                 style={{
                     width: "100%",
                     height: "4px",
-                    backgroundColor: "maroon",
+                    backgroundColor: "orange",
                 }}
             />
         </>
