@@ -11,45 +11,44 @@ EatUp is a frontend-focused food delivery platform where users can browse menus,
 ---
 
 ## ✨ Features
+
 - 🏠 Responsive homepage with featured items and smooth navigation
 
 <p align="center">
   <img src="https://github.com/TonimaDristy/Food-delivery/raw/main/Screenshot%202026-04-21%20233031.png" width="50%" />
 </p>
 
-- 🔻 Clean footer with navigation links and contact info
-
-  <p align="center">
-  <img src="https://github.com/TonimaDristy/Food-delivery/raw/main/localhost_3000_(Surface%20Pro%207).png
-" width="50%" />
-</p>
-
-- 🍽 Interactive menu with add-to-cart functionality
+- 🔻 Clean footer with navigation links and contact info  
 
 <p align="center">
-  <img src="https://github.com/TonimaDristy/Food-delivery/blob/main/localhost_3000_menu(Surface%20Pro%207).png" width="50%" />
+  <img src="https://github.com/TonimaDristy/Food-delivery/raw/main/localhost_3000_(Surface%20Pro%207).png" width="50%" />
 </p>
 
-- 🛒 Cart management using local storage
+- 🍽 Interactive menu with add-to-cart functionality  
 
-  <p align="center">
-  <img src="https://github.com/TonimaDristy/Food-delivery/blob/main/localhost_3000_cart(Surface%20Pro%207).png" width="50%" />
+<p align="center">
+  <img src="https://github.com/TonimaDristy/Food-delivery/raw/main/localhost_3000_menu(Surface%20Pro%207).png" width="50%" />
 </p>
 
-- 📦 Order tracking with status indicators
+- 🛒 Cart management using local storage  
 
-  <p align="center">
+<p align="center">
+  <img src="https://github.com/TonimaDristy/Food-delivery/raw/main/localhost_3000_cart(Surface%20Pro%207).png" width="50%" />
+</p>
+
+- 📦 Order tracking with status indicators  
+
+<p align="center">
   <img src="https://github.com/TonimaDristy/Food-delivery/raw/main/localhost_3000_orders(Surface%20Pro%207).png" width="50%" />
 </p>
   
-- 🔐 Frontend-only login system
+- 🔐 Frontend-only login system  
 
-  <p align="center">
-  <img src="https://github.com/TonimaDristy/Food-delivery/raw/main/localhost_3000_menu(Surface%20Pro%207).png
-" width="50%" />
+<p align="center">
+  <img src="https://github.com/TonimaDristy/Food-delivery/raw/main/localhost_3000_menu(Surface%20Pro%207).png" width="50%" />
 </p>
 
-- 📱 Fully responsive modern UI/UX  
+- 📱 Fully responsive modern UI/UX    
 
 ---
 
