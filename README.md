@@ -1,7 +1,9 @@
 EatUp – a full-featured Food Delivery App!
 
-[Demo](https://github.com/TonimaDristy/Food-delivery/blob/main/47996a3a-2a42-42be-9d58-0c553f7eddf0.jpg)
-
+<h2 align="left">📸 Demo</h2>
+<p align="center">
+  <img src="https://github.com/TonimaDristy/Food-delivery/blob/main/47996a3a-2a42-42be-9d58-0c553f7eddf0.jpg" width="500"/>
+</p>
 
 Built with Next.js, React, Tailwind CSS.
 
