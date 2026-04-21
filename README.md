@@ -1,21 +1,24 @@
-EatUp – a full-featured Food Delivery App!
+🚀 EatUp – Full-Featured Food Delivery App
 
-<h2 align="left">📸 Demo</h2>
+📸 Demo
+
 <p align="center">
-  <img src="https://github.com/TonimaDristy/Food-delivery/blob/main/47996a3a-2a42-42be-9d58-0c553f7eddf0.jpg" width="500"/>
+  <img src="https://github.com/TonimaDristy/Food-delivery/raw/main/47996a3a-2a42-42be-9d58-0c553f7eddf0.jpg" width="600"/>
 </p>
 
-Built with Next.js, React, Tailwind CSS.
+📝 Description
 
-This project features:
+A modern food delivery web app built using **Next.js, React, and Tailwind CSS**.  
+Focused on clean UI, smooth user experience, and interactive features.
 
-•Interactive Menu & Add-to-Cart functionality
+✨ Features
+- 🍽 Interactive menu with add-to-cart functionality  
+- 🛒 Cart management using local storage  
+- 📦 Order tracking with status indicators  
+- 🔐 Frontend-only login system  
+- 📱 Fully responsive modern UI/UX  
 
-•Cart management with local storage
-
-•Orders tracking with status indicators
-
-•Frontend-only Login system
-
-•Responsive and modern UI/UX design
-
+🛠 Tech Stack
+- Next.js  
+- React  
+- Tailwind CSS  
