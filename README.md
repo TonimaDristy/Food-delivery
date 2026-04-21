@@ -1,4 +1,4 @@
-🚀 EatUp – Full-Featured Food Delivery App
+## 🚀 EatUp – Full-Featured Food Delivery App
 
 📸 Demo
 
