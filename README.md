@@ -14,9 +14,8 @@ EatUp is a frontend-focused food delivery platform where users can browse menus,
 - 🏠 Responsive homepage with featured items and smooth navigation
 
 <p align="center">
-  <img src="
-https://github.com/TonimaDristy/Food-delivery/raw/main/Screenshot%202026-04-21%20233031.png" width="50%" />
-
+  <img src="https://github.com/TonimaDristy/Food-delivery/raw/main/Screenshot%202026-04-21%20233031.png" width="50%" />
+</p>
 
 - 🔻 Clean footer with navigation links and contact info  
 - 🍽 Interactive menu with add-to-cart functionality  
